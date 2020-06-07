@@ -7,6 +7,8 @@
 
 #page-create-point header {
   margin-top: 48px;
+  margin-left: 10px;
+  margin-right: 10px;
 
   display: flex;
   justify-content: space-between;
@@ -40,6 +42,10 @@
 
 #page-create-point form h1 {
   font-size: 36px;
+}
+
+#page-create-point form h1 + h1{
+  display: none;
 }
 
 #page-create-point form fieldset {
@@ -245,4 +251,49 @@
 
 .success-modal.show{
   visibility: visible;
+}
+
+@media (max-width: 660px){
+  #page-create-point h1{
+    text-align: center;
+  }
+
+  .field-group{
+    flex-direction: column;
+  }
+
+  #page-create-point form .field-group .field + .field,
+  #page-create-point form .field-group input + input {
+    margin-left: 0;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 400px){
+  #page-create-point header{
+    flex-direction: row-reverse;
+  }
+
+  #page-create-point header a span{
+    display: none;
+  }
+
+  #page-create-point header a{
+    font-size: 36px;
+  }
+
+  #page-create-point form h1{
+    display: none;
+  }
+
+  #page-create-point form h1 + h1{
+    display: block;
+  }
+
+  .items-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

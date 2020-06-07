@@ -2,11 +2,11 @@
 
 Esta aplicação tem como objetivo armazenar os dados de pontos e itens de coleta de resíduos, e servir estas informações aos clientes que desejem consumí-la. É uma API livre, sem a necessidade de autenticação para acessá-la.
 
-## Endpoints
+## 1. Endpoints
 
 A API disponibiliza certas rotas para criação e obtenção de dados:
 
-### Items
+### 1.1. Items
 
 #### GET
 
@@ -23,7 +23,7 @@ A API disponibiliza certas rotas para criação e obtenção de dados:
   }
 ```
 
-### Points
+### 1.2. Points
 
 #### GET
 
@@ -108,14 +108,14 @@ A API disponibiliza certas rotas para criação e obtenção de dados:
 ```
 
 
-## Variáveis de Ambiente
+## 2. Variáveis de Ambiente
 
 A aplicação utiliza algumas variáeveis de ambiente para funcionar. Por isso, considere criar um arquivo *.env* com as seguintes informações:
 
 - PORT: A variável que define qual porta o servidor ficará ouvindo. Só deve ser preenchida em ambientes locais, pois em produção o servidor irá configurar esta variável automaticamente na maioria dos casos.
 - ADDRESS: O endereço da nossa aplicação na rede. Este é usado na construção das URLs na hora de servir as imagens estáticas salvas no banco de dados. O formato deve ser *'http://localhost:3333'* para teste local ou *'https://meuapp.herokuapp.com'* para ambientes de produção, por exemplo.
 
-## Bibliotecas Utilizadas:
+## 3. Bibliotecas Utilizadas:
 
 As seguintes bibliotecas foram utilizadas na aplicação:
 

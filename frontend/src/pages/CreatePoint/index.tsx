@@ -139,12 +139,17 @@ const CreatePoint = () => {
     if(selectedFile)
       data.append('image', selectedFile);
 
-    await api.post('/points', data);
+    try{
+      await api.post('/points', data);
 
-    const body = document.querySelector('body');
-    if(body)
-      body.style.overflow = "hidden";
-    setModalShown(true);
+      const body = document.querySelector('body');
+      if(body)
+        body.style.overflow = "hidden";
+      setModalShown(true);
+    } catch(error){
+      console.error(error);
+    }
+    setDisabled(false);
   }
 
   return (
@@ -153,12 +158,13 @@ const CreatePoint = () => {
         <img src={logo} alt="Ecoleta"/>
 
         <Link to="/">
-          <FiArrowLeft /> Voltar para a home
+          <FiArrowLeft /> <span>Voltar para a home</span>
         </Link>
       </header>
 
       <form onSubmit={handleSubmit}>
         <h1>Cadastro do <br/> ponto de coleta</h1>
+        <h1>Cadastro</h1>
 
         <Dropzone onFileUploaded={setSelectedFile} />
 

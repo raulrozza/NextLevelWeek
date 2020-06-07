@@ -1,44 +1,57 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Ecoleta Web
 
-## Available Scripts
+Este sistema desenvolvido em ReactJS tem como objetivo cadastrar, na API do Ecoleta, os pontos de coletas de resíduos na região.
 
-In the project directory, you can run:
+Acessando o sistema, o usuário pode cadastrar um ponto colocando suas informações e localização.
 
-### `npm start`
+## 1. Telas
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### 1.1 Home
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Home](../assets/web-home.jpg) 
+![Home_Responsive](../assets/web-home-responsive.jpg)
 
-### `npm test`
+Esta é a tela de boas vindas da aplicação, aprensentando o objetivo o Ecoleta. Ao clicar no botão, o usuário é redirecionado para a tela de cadastro de ponto de coleta.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1.2 Criar Ponto
 
-### `npm run build`
+![Point](../assets/web-point-1.jpg)
+![Point](../assets/web-point-2.jpg)
+![Point](../assets/web-point-3.jpg)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Na página de cadastro de pontos, o usuário pode cadastrar o ponto de coleta na base de dados da aplicação. Para tal, ele precisa informar:
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- O nome da entidade de coleta
+- Seu e-mail
+- Seu número de whatsapp
+- Seu estado
+- Sua cidade
+- Sua localização no mapa
+- Uma imagem da entidade
+- Quais dos itens ela coleta
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Os itens coletáveis são fornecidos pela API, e as opções de uf e cidade são fornecidas automaticamente pela API do IBGE.
 
-### `npm run eject`
+Além disso, o usuário pode selecionar a localização da entidade clicando no exato ponto do mapa.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Ao finalizar o preenchimento dos dados, o usuário pode clicar no botão **Cadastrar Ponto de Coleta**, que submeterá o cadastro na aplicação.
+A seguinte tela aparecerá para confirmar o cadastro:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![Point Finished](../assets/web-point-finished.jpg)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Abaixo, seguem as imagens da aplicação vista de um smartphone:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+![Point-responsive](../assets/web-point-responsive-1.jpg) 
+![Point-responsive](../assets/web-point-responsive-2.jpg)
 
-## Learn More
+## 2. Sobre a Aplicação
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A aplicação foi desenvolvida em ReactJS utilizando o [Create React App](https://create-react-app.dev/) para preparar o ambiente de desenvolvimento e cuidar do ambiente de produção. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Além disso, as seguintes bibliotecas foram utilizadas:
+
+- **[Axios:](https://www.npmjs.com/package/axios)** Um cliente HTTP baseado em Promises, o Axios foi utilizado para realizar as diversas chamadas a API.
+- **[Leaflet:](https://leafletjs.com/)** Leaflet é uma biblioteca *open-source* para a utilização de mapas interativos, usada nessa aplicação para mostrar o mapa da região e permitir ao usuário informar a localização do ponto de coleta. Para integrá-lo com o React, foi usado o pacote [React Leaflet](https://react-leaflet.js.org/).
+- **[React Dropzone:](https://react-dropzone.js.org/)** Pacote que disponibilizou o componente de *Drag and Drog*/seleção de arquivos usado na aplicação para envio de imagem.
+- **[React Icons:](https://react-icons.github.io/react-icons/)** Pacote que abstrai as diversas bibliotecas de ícones existentes (FontAwesome, Feather Icons, Material Icons, etc) e as disponibiliza inteiramente em um único lugar.
+- **[React Loading:](https://www.npmjs.com/package/react-loading)** Pacote que disponibiliza componentes com ícones de carregamento em SVG. Utilizado como componente para o *fallback* do Suspense, componente que foi utilizado para realizar o *lazy loading* dos componentes de rotas da aplicação.
