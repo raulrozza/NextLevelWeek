@@ -1,6 +1,6 @@
 # Ecoleta Web
 
-Este sistema desenvolvido em ReactJS tem como objetivo cadastrar, na API do Ecoleta, os pontos de coletas de resíduos na região.
+Este sistema desenvolvido em ReactJS tem como objetivo cadastrar, na API do Ecoleta, os pontos de coletas de resíduos da região.
 
 Acessando o sistema, o usuário pode cadastrar um ponto colocando suas informações e localização.
 
@@ -11,7 +11,7 @@ Acessando o sistema, o usuário pode cadastrar um ponto colocando suas informaç
 ![Home](../assets/web-home.jpg) 
 ![Home_Responsive](../assets/web-home-responsive.jpg)
 
-Esta é a tela de boas vindas da aplicação, aprensentando o objetivo o Ecoleta. Ao clicar no botão, o usuário é redirecionado para a tela de cadastro de ponto de coleta.
+Esta é a tela de boas vindas da aplicação, apresentando o objetivo o Ecoleta. Ao clicar no botão, o usuário é redirecionado para a tela de cadastro de ponto de coleta.
 
 ### 1.2 Criar Ponto
 
